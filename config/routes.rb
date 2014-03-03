@@ -1,4 +1,6 @@
 SocialNews::Application.routes.draw do
+  resources :posts
+
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords"}, skip: [:sessions, :registrations]
   get "posts/index"
   # The priority is based upon order of creation: first created -> highest priority.
